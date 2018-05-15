@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Random Word Generator</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script> -->
+</head>
+<body>
+    <center><h1>Random Word (attempt # {{ request.session.count }})</h1></center>
+    <form action="/random" method='POST'>
+        {% csrf_token %}
+
+    <center><div> {{ request.session.word }} </div> </center>
+    <br>
+    <center><button type="submit" method="POST">Reload</button></center>
+    </form>
+</body>
+</html>
